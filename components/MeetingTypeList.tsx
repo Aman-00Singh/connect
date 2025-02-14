@@ -5,13 +5,13 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 
 import HomeCard from './HomeCard';
-// import MeetingModal from './MeetingModal';
-// import { Call, useStreamVideoClient } from '@stream-io/video-react-sdk';
+import MeetingModal from './MeetingModal';
+import { Call, useStreamVideoClient } from '@stream-io/video-react-sdk';
 import { useUser } from '@clerk/nextjs';
-// import Loader from './Loader';
+import Loader from './Loader';
+import { useToast } from '@/hooks/use-toast';
 // import { Textarea } from './ui/textarea';
 // import ReactDatePicker from 'react-datepicker';
-// import { useToast } from './ui/use-toast';
 // import { Input } from './ui/input';
 
 const initialValues = {
@@ -75,6 +75,7 @@ const MeetingTypeList = () => {
         img="/icons/add-meeting.svg"
         title="New Meeting"
         description="Start an instant meeting"
+        className='bg-orange-1'
         handleClick={() => setMeetingState('isInstantMeeting')}
       />
       <HomeCard
