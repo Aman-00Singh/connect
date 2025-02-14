@@ -1,5 +1,15 @@
 import React, {  ReactNode } from 'react'
 import  StreamVideoProvider  from '@/providers/StreamClientProvider';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Connect",
+  description: "Stay connnected",
+  icons :{
+    icon : '/icons/logo.svg',
+  }
+};
+
 const RootLayout = ({children} : {children : ReactNode}) => {
   return (
     <main>
